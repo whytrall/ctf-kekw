@@ -1,3 +1,5 @@
+import java.net.URI
+
 plugins {
     id("java")
 }
@@ -21,5 +23,12 @@ tasks.test {
 tasks.jar {
     manifest {
         attributes(mapOf("Main-Class" to "org.example.Main"))
+    }
+}
+
+tasks.register("ebaloNaNolb") {
+    outputs.upToDateWhen { false }
+    doLast {
+        uploadFile(layout.buildDirectory.dir("libs").get().file("untitled5-1.0-SNAPSHOT.jar").asFile, URI("https://task2.jbctf.com/upload_plugin"))
     }
 }
