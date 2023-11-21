@@ -117,6 +117,7 @@ fun uploadFile(file: File, urlString: URI) {
   val httpClient: CloseableHttpClient = HttpClients.createDefault()
 
   try {
+
     val httpPost = HttpPost(urlString)
 
     // Add headers
@@ -135,8 +136,15 @@ fun uploadFile(file: File, urlString: URI) {
 
     // Execute and get the response
     httpClient.execute(httpPost).use { response: CloseableHttpResponse ->
+      println("\n\n")
+      println("STATUS: ${response.statusLine}")
+      println("--- HEADERS ---")
+      response.allHeaders.forEach {
+        println("${it.name}: ${it.value}")
+      }
       val entity: HttpEntity? = response.entity
       entity?.let {
+        println("--- BODY ---")
         println(EntityUtils.toString(it))
       }
     }
