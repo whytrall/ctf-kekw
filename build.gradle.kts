@@ -26,9 +26,19 @@ tasks.jar {
     }
 }
 
-tasks.register("ebaloNaNolb") {
+tasks.register("upload") {
+    group = "niiiiice"
     outputs.upToDateWhen { false }
     doLast {
-        uploadFile(layout.buildDirectory.dir("libs").get().file("untitled5-1.0-SNAPSHOT.jar").asFile, URI("https://task2.jbctf.com/upload_plugin"))
+        uploadFile(layout.buildDirectory.dir("libs").get().file("untitled5-1.0-SNAPSHOT.jar").asFile, URI("https://task1.jbctf.com/upload_plugin"))
+    }
+}
+
+tasks.register("buildAndUpload") {
+    group = "niiiiice"
+    dependsOn(tasks.getByName("jar"))
+    outputs.upToDateWhen { false }
+    doLast {
+        uploadFile(layout.buildDirectory.dir("libs").get().file("untitled5-1.0-SNAPSHOT.jar").asFile, URI("https://task1.jbctf.com/upload_plugin"))
     }
 }
