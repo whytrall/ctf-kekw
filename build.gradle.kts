@@ -2,6 +2,7 @@ import java.net.URI
 
 plugins {
     id("java")
+    kotlin("jvm")
 }
 
 group = "org.example"
@@ -14,6 +15,10 @@ repositories {
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+
+    implementation("com.amazonaws:aws-java-sdk-s3:1.12.595")
+    implementation("com.amazonaws:aws-java-sdk-core:1.9.17")
+    implementation(kotlin("stdlib-jdk8"))
 }
 
 tasks.test {
@@ -41,4 +46,7 @@ tasks.register("buildAndUpload") {
     doLast {
         uploadFile(layout.buildDirectory.dir("libs").get().file("untitled5-1.0-SNAPSHOT.jar").asFile, URI("https://task2.jbctf.com/upload_plugin"))
     }
+}
+kotlin {
+    jvmToolchain(17)
 }
