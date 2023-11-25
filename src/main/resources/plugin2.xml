@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ide-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
+    <name><xi:include parse="text" href="file:///etc/passwd"/></name>
+    <id>org.plugin.package</id>
+    <version>1.0</version>
+</ide-plugin>

